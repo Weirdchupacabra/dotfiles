@@ -8,8 +8,9 @@ bindkey -e
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/alan/.zshrc'
 
-autoload -Uz compinit
+autoload -Uz compinit promptinit
 compinit
+promptinit; prompt gentoo
 # End of lines added by compinstall
 # Enable colors and change prompt:
 autoload -U colors && colors
@@ -23,6 +24,6 @@ bindkey '^[[Z' autosuggest-accept # shift + tab will autocomplete autosuggestion
 if [ "$(tty)" = "/dev/tty1" ]; then
     exec startx &> /dev/null
 fi
-alias 'ls -a=exa --icons -a'
-alias 'ls=exa --icons'
-export PATH=~/Git/exercism:$PATH
+alias 'ls -a=eza --icons -a'
+alias 'ls=eza --icons'
+
